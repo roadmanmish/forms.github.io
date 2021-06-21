@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HOODRICH</title>
+  <script>
+	function display(){
+		if( document.enquiries.name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.enquiries.name.focus() ;
+            return false;
+         }
+		 if( document.enquiries.number.value == "" ) {
+            alert( "Please provide your number!" );
+            document.enquiries.number.focus() ;
+            return false;
+         }
+		 if( document.enquiries.emailaddress.value == "" ) {
+            alert( "Please provide your email address!" );
+            document.enquiries.emailaddress.focus() ;
+            return false;
+         }
+		 if( document.enquiries.enquiry.value == "" ) {
+            alert( "Please provide your enquiry!" );
+            document.enquiries.enquiry.focus() ;
+            return false;
+         }
+         alert("Thank you, your form was submitted successfully");
+		 document.getElementById("enquiries").reset();
+         return( true );	
+	}
+  </script>
+</head>
+<body>
+<br><br>
+<form name="enquiries" action="" method="post" id="enquiries"><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+<input type="text" name="name" required><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+<input type="number" name="number" required><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+<input type="email" name="emailaddress" required><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enquiry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="enquiry" cols="30" rows="10" required></textarea><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="SUBMIT" onclick="display();"><br><br>
+</form>	
+</body>
+</html>
